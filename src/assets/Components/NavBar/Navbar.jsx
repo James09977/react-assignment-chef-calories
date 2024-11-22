@@ -4,7 +4,7 @@ import usrPic from "../../../../src/../public/img/Vector.png";
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar flex justify-around mt-12 ">
+      <div className="navbar flex justify-between mt-12 p-0 ">
         <div>
           <h1 className=" font-bold text-3xl ">Racepi Kalories</h1>
         </div>
