@@ -2,12 +2,12 @@ import banner from "../../../../public/img/Banner img.jpg";
 
 const Banner = () => {
   return (
-    <div>
+    <div className="">
       <div
-        className="bg-cover h-80 md:h-[600px] object-contain rounded-3xl mt-12 "
+        className="bg-cover h-80 md:h-[600px] object-contain rounded-3xl mt-12  "
         style={{ backgroundImage: `url(${banner})` }}
       >
-        <h1 className="text-white font-bold text-5xl text-center md:pt-40 leading-[72px]">
+        <h1 className="text-white font-bold text-5xl text-center md:pt-36 leading-[72px]">
           Discover an exceptional cooking <br /> class tailored for you!
         </h1>
         <p className="text-white text-base text-center pt-6 leading-8 ">
