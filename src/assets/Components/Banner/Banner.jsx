@@ -1,8 +1,16 @@
 import banner from "../../../../public/img/Banner img.jpg";
 
-const Banner = () => {
+const Banner = ({ toast }) => {
   return (
     <div className="">
+      {/* toast */}
+
+      <div className={`toast toast-top toast-end ${toast} `}>
+        <div className="alert alert-info">
+          <span>Already Added</span>
+        </div>
+      </div>
+
       <div
         className="bg-cover h-80 md:h-[600px] object-contain rounded-3xl mt-12  "
         style={{ backgroundImage: `url(${banner})` }}

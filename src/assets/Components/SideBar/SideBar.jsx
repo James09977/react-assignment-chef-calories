@@ -1,12 +1,9 @@
 import PropTypes from "prop-types";
-import Recipe from "../Recipe/Recipe";
 
-const SideBar = ({ recipes }) => {
-  console.log(recipes);
-
+const SideBar = ({ recipes, handlePreparing, removeTtem }) => {
   return (
-    <div className="w-1/3 mx-auto">
-      <div className="overflow-x-auto border rounded">
+    <div className="w-full ">
+      <div className="overflow-x-auto  ">
         <h1 className="text-center font-bold text-2xl my-5">
           Want to Cook: {recipes.length}
         </h1>
@@ -31,7 +28,13 @@ const SideBar = ({ recipes }) => {
                 <td>{recipe.preparing_time}</td>
                 <td>{recipe.calories}</td>
                 <td>
-                  <button className="bg-[#0BE58A] font-medium py-2 px-4 rounded-full ">
+                  <button
+                    onClick={() => {
+                      handlePreparing(recipe);
+                      removeTtem(recipe.recipe_id);
+                    }}
+                    className="bg-[#0BE58A] font-medium py-2 px-4 rounded-full "
+                  >
                     Preparing
                   </button>
                 </td>
@@ -49,12 +52,16 @@ const SideBar = ({ recipes }) => {
           </tbody>
         </table>
       </div>
+
+      {/* cURRENTLY COOKING */}
     </div>
   );
 };
 
 SideBar.propTypes = {
   recipes: PropTypes.array,
+  handlePreparing: PropTypes.func,
+  removeitem: PropTypes.func,
 };
 
 export default SideBar;

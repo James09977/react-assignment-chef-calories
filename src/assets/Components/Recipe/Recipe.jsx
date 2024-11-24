@@ -3,7 +3,7 @@ import { IoTimeOutline } from "react-icons/io5";
 import { AiOutlineFire } from "react-icons/ai";
 
 const Recipe = ({ recipe, handleCook }) => {
-  //   console.log(recipe);
+  // console.log(recipe);
   const {
     calories,
     ingredients,
@@ -11,6 +11,7 @@ const Recipe = ({ recipe, handleCook }) => {
     recipe_image,
     recipe_name,
     short_description,
+    recipe_id,
   } = recipe;
   return (
     <div>
@@ -54,7 +55,7 @@ const Recipe = ({ recipe, handleCook }) => {
 
           <div className="card-actions mt-4">
             <button
-              onClick={() => handleCook(recipe)}
+              onClick={() => handleCook(recipe, recipe_id)}
               className=" font-semibold bg-[#0BE58A] px-6 py-3 rounded-full "
             >
               Want to Cook
