@@ -13,8 +13,7 @@ function App() {
   const [cook, setCook] = useState([]);
 
   const handleCook = (recipe) => {
-    // const addingRecipe = recipes.includes((recipe) => recipe.recipe_id !== id);
-
+    // --------- finding duplicate-------------
     const isDuplicate = recipes.some((r) => r.recipe_id === recipe.recipe_id);
     // console.log(isDuplicate);
     if (!isDuplicate) {
